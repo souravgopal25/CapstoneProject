@@ -1,2 +1,3 @@
+include ':DataForApp'
 include ':app'
 rootProject.name = "CapstoneProject"

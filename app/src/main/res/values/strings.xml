@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">CapstoneProject</string>
+    <string name="homeactivity">Home Activity</string>
+    <string name="gotocart">GO To Cart</string>
+    <string name="addtocart">Add to Cart</string>
+    <string name="signup">Signup</string>
+    <string name="signin">Signin</string>
+    <string name="cart">Cart </string>
+    <string name="deliverydetail">Delivery Detail</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="pass">Password</string>
+    <string name="cpass">Confirm Password</string>
+    <string name="total">Total :</string>
+    <string name="dollar">$</string>
+    <string name="qty">Qty :</string>
+    <string name="next">Next</string>
+    <string name="rate">Rate :</string>
+    <string name="remove">Remove</string>
 </resources>
