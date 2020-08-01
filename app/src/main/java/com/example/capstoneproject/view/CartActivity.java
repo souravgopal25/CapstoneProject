@@ -38,8 +38,7 @@ import butterknife.OnClick;
 
 public class CartActivity extends AppCompatActivity implements ListItemClickListener {
 
-    @BindView(R.id.toolbar_container)
-    AppBarLayout toolbarContainer;
+
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
     @BindView(R.id.total)

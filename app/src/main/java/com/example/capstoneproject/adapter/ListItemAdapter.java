@@ -59,7 +59,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
         Glide.with(context).load(obj.getImageUrl()).into(holder.imageView);
         holder.imageView.setContentDescription(obj.getDescription());
         holder.textView.setText(obj.getItemName());
-        holder.textView1.setText(Float.toString(obj.getPrice()));
+        holder.textView1.setText("$"+Float.toString(obj.getPrice()));
         holder.textView2.setText(obj.getDescription());
         holder.spinner.setAdapter(a1);
 

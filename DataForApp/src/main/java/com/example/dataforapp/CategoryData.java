@@ -20,8 +20,7 @@ public class CategoryData {
 
         Category obj1 = new Category();
         obj1.setDescription("a deep-dish pizza has room for a larger quantity of toppings with a sturdier crust.");
-        obj1.setImageUrl("\n" +
-                "https://www.recipegirl.com/wp-content/uploads/2018/03/Chicago-Style-Deep-Dish-Pizza-RecipeGirl-3.jpg\n");
+        obj1.setImageUrl("https://www.recipegirl.com/wp-content/uploads/2018/03/Chicago-Style-Deep-Dish-Pizza-RecipeGirl-3.jpg");
         obj1.setItemName("CHICAGO PIZZA");
         listCategories.add(obj1);
 
@@ -33,8 +32,7 @@ public class CategoryData {
 
         Category obj3 = new Category();
         obj3.setDescription("Pizza proofed and cooked in order and baked on the floor of the pizza oven making the crust spongy, airy, and light");
-        obj3.setImageUrl("\n" +
-                "https://www.cookingclassy.com/wp-content/uploads/2013/10/greek-pizza3+srgb..jpg");
+        obj3.setImageUrl("https://www.cookingclassy.com/wp-content/uploads/2013/10/greek-pizza3+srgb..jpg");
         obj3.setItemName("Greek pizza");
         listCategories.add(obj3);
 

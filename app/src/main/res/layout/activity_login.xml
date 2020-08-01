@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.LoginActivity"
-    android:background="@color/background"
+    android:background="@color/textonActionBar"
     android:padding="20dp">
 
     <LinearLayout
@@ -12,6 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:elevation="@dimen/elevation"
         android:background="@color/forefround"
         android:orientation="vertical">
 
@@ -89,6 +90,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:gravity="center"
+        android:elevation="@dimen/elevationCard"
         android:padding="5dp"
         android:text="CREATE ACCOUNT"
        android:background="@color/forefround"

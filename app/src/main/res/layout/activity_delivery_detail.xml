@@ -19,10 +19,10 @@
             android:layout_marginBottom="10dp"
             android:elevation="10dp"
             android:gravity="center"
+            android:textColorHighlight="@color/dark"
             android:padding="10dp"
 
             android:text=" Delivery Details "
-            android:textColor="@color/forefround"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -31,6 +31,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:textColor="@color/dark"
             android:background="@android:color/white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
@@ -44,27 +45,32 @@
 
         <View
             android:layout_width="fill_parent"
+            android:textColor="@color/dark"
             android:layout_height="1px"
             />
 
 
         <View
+            android:textColor="@color/dark"
             android:layout_width="fill_parent"
             android:layout_height="1px"
            />
 
 
         <View
+            android:textColor="@color/dark"
             android:layout_width="fill_parent"
             android:layout_height="1px"
            />
 
         <View
+            android:textColor="@color/dark"
             android:layout_width="fill_parent"
             android:layout_height="1px"
             />
 
         <View
+            android:textColor="@color/dark"
             android:layout_width="fill_parent"
             android:layout_height="1px"
              />
@@ -72,6 +78,7 @@
 
 
         <EditText
+            android:textColor="@color/dark"
             android:id="@+id/address"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -89,6 +96,7 @@
 
 
         <EditText
+            android:textColor="@color/dark"
             android:id="@+id/landmark"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -106,6 +114,7 @@
 
 
         <EditText
+            android:textColor="@color/dark"
             android:id="@+id/zip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -122,13 +131,13 @@
             android:textSize="16sp" />
 
         <Button
+            android:textColor="@color/dark"
             android:id="@+id/btnOrder"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Place Order\n(Cash On Delivery)"
-            android:elevation="10dp"
-            android:background="#E62C6B"
-
+            android:elevation="@dimen/elevationCard"
+            android:background="@color/textonActionBar"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_marginTop="40dp">

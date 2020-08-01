@@ -6,4 +6,5 @@
     <color name="background">#E91E63</color>
     <color name="forefround">#34D5C1</color>
     <color name="textonActionBar">#BBDCD8</color>
+    <color name="dark">#000000</color>
 </resources>

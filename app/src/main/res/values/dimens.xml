@@ -32,6 +32,7 @@
     <dimen name="marginLeftcardView">15dp</dimen>
     <dimen name="marginRightcardView">15dp</dimen>
     <dimen name="text20">20sp</dimen>
+    <dimen name="elevation">20dp</dimen>
     <!--
 Refer to App Widget Documentation for margin information
 http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
