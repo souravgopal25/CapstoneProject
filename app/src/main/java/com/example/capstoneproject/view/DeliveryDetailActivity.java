@@ -1,7 +1,10 @@
 package com.example.capstoneproject.view;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,6 +69,16 @@ public class DeliveryDetailActivity extends AppCompatActivity {
         new FirebaseData().execute(order);
         Toast.makeText(this, "Order Placed", Toast.LENGTH_SHORT).show();
         deliveryDetailActivityViewModel.deleteAll();
+        Toast.makeText(this, "Order Places And Orded is Added To Widget", Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(DeliveryDetailActivity.this,MainActivity.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setSharedElementEnterTransition(new Explode());
+            startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }else{
+            startActivity(intent);
+        }
+        startActivity(intent);
 
     }
 }

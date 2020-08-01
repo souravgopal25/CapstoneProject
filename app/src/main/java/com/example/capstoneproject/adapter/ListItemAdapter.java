@@ -60,6 +60,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
         holder.imageView.setContentDescription(obj.getDescription());
         holder.textView.setText(obj.getItemName());
         holder.textView1.setText(Float.toString(obj.getPrice()));
+        holder.textView2.setText(obj.getDescription());
         holder.spinner.setAdapter(a1);
 
 
@@ -78,6 +79,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
         ImageView imageView;
         Spinner spinner;
         TextView textView;
+        TextView textView2;
         Button button;
         TextView textView1;
 
@@ -88,6 +90,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
             textView=itemView.findViewById(R.id.item_detail_title);
             button=itemView.findViewById(R.id.btnitemdetail);
             textView1=itemView.findViewById(R.id.price);
+            textView2=itemView.findViewById(R.id.description);
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

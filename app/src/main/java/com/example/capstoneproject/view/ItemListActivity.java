@@ -1,7 +1,10 @@
 package com.example.capstoneproject.view;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.Toast;
 
@@ -71,6 +74,13 @@ public class ItemListActivity extends AppCompatActivity implements ListItemAdapt
 
     public void fabButton(View view) {
         Intent intent=new Intent(ItemListActivity.this,LoginActivity.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setSharedElementEnterTransition(new Explode());
+            startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }else{
+            startActivity(intent);
+        }
         startActivity(intent);
     }
 

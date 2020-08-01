@@ -1,8 +1,11 @@
 package com.example.capstoneproject.view;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.transition.Explode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -74,6 +77,13 @@ public class LoginActivity extends AppCompatActivity {
                                 Log.d(TAG, "createUserWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Intent intent=new Intent(LoginActivity.this,CartActivity.class);
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                    getWindow().setSharedElementEnterTransition(new Explode());
+                                    startActivity(intent,
+                                            ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this).toBundle());
+                                }else{
+                                    startActivity(intent);
+                                }
                                 startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.

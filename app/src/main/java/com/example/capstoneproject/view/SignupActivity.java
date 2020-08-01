@@ -1,8 +1,11 @@
 package com.example.capstoneproject.view;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.transition.Explode;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,6 +77,13 @@ public class SignupActivity extends AppCompatActivity {
                                 user1.setUid(uid);
                                 signupActivityViewModel.UploadUsers(user1);
                                 Intent intent=new Intent(SignupActivity.this,CartActivity.class);
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                    getWindow().setSharedElementEnterTransition(new Explode());
+                                    startActivity(intent,
+                                            ActivityOptions.makeSceneTransitionAnimation(SignupActivity.this).toBundle());
+                                }else{
+                                    startActivity(intent);
+                                }
                                 startActivity(intent);
 
 

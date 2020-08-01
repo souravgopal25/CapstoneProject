@@ -15,7 +15,16 @@
             android:id="@+id/activity_item_list_detail_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/background"/>
+            android:background="@color/background">
+            <TextView
+                android:text="@string/item"
+                android:textColor="@color/textonActionBar"
+                android:fontFamily="cursive"
+                android:textSize="@dimen/textsizeappbarlayout"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="@dimen/layoutmarginTop"

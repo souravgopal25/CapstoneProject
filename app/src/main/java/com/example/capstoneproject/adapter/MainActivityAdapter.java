@@ -49,6 +49,7 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
         Glide.with(context).load(object.getImageUrl()).into(holder.imageView);
         holder.imageView.setContentDescription(object.getDescription());
         holder.textView.setText(object.getItemName());
+        holder.textView1.setText(object.getDescription());
 
     }
 
@@ -64,11 +65,12 @@ public class MainActivityAdapter extends RecyclerView.Adapter<MainActivityAdapte
 
     public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imageView;
-        TextView textView;
+        TextView textView,textView1;
         public MovieViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.imageMain);
-            textView=itemView.findViewById(R.id.titleMain);
+            textView=itemView.findViewById(R.id.name);
+            textView1=itemView.findViewById(R.id.description);
             itemView.setOnClickListener(this);
 
         }

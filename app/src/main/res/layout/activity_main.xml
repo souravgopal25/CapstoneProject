@@ -16,6 +16,7 @@
             android:overScrollMode="always"
             app:layout_scrollFlags="scroll|enterAlways|snap">
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/main_activity_toolbar_layout_height"
                 android:elevation="@dimen/elevation_appbar_layout"

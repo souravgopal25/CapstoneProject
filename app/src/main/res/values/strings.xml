@@ -22,4 +22,5 @@
     <string name="add_widget">Add widget</string>
     <string name="order">Order</string>
     <string name="orderdetail">Order Details</string>
+    <string name="item">Pizza</string>
 </resources>
