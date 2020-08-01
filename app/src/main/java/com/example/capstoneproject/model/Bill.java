@@ -1,5 +1,8 @@
 package com.example.capstoneproject.model;
 
+import androidx.room.Entity;
+
+
 public class Bill {
     Order order;
     String name;

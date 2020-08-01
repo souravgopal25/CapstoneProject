@@ -4,11 +4,57 @@ package com.example.capstoneproject.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
+
+
 import java.util.List;
+
 public class Order implements Parcelable {
+
     public List<CartItem> cartItems;
+
     public float price;
     public int orderNo;
+    String name;
+    String address;
+    String landmarks;
+    String zip;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getLandmarks() {
+        return landmarks;
+    }
+
+    public void setLandmarks(String landmarks) {
+        this.landmarks = landmarks;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public static Creator<Order> getCREATOR() {
+        return CREATOR;
+    }
 
     protected Order(Parcel in) {
         cartItems = in.createTypedArrayList(CartItem.CREATOR);

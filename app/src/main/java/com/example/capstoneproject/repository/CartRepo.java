@@ -2,6 +2,7 @@ package com.example.capstoneproject.repository;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -43,5 +44,22 @@ public class CartRepo {
         ItemData itemData=new ItemData(category);
         data.setValue(itemData.getItemList());
         return data;
+    }
+    public void deleteall(){
+       new deleteAllAsyncTask(addtoCartDao).execute();
+    }
+    private static class deleteAllAsyncTask extends AsyncTask<Void,Void,Void>{
+
+        private AddtoCartDao addtoCartDao;
+        deleteAllAsyncTask(AddtoCartDao addtoCartDao){
+            this.addtoCartDao=addtoCartDao;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            addtoCartDao.deleteAll();
+            return null;
+
+        }
     }
 }

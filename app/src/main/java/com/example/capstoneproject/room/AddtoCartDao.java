@@ -16,6 +16,8 @@ public interface AddtoCartDao {
     void insert(CartItem cartItem);
     @Delete
     void delete(CartItem cartItem);
+    @Query("DELETE FROM cart")
+    void deleteAll();
 
     @Query("SELECT * FROM  cart ORDER BY id")
     LiveData<List<CartItem>> getCartItems();
