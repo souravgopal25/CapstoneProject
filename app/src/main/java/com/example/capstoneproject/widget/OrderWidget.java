@@ -23,7 +23,7 @@ public class OrderWidget extends AppWidgetProvider {
 
         RemoteViews views =new RemoteViews(context.getPackageName(), R.layout.order_widget);
         SharedPreferences sharedPreferences = context.getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE);
-       // views.setTextViewText(R.id.tv_widget_title, sharedPreferences.getString(Constant.PREFERENCES_WIDGET_TITLE, ""));
+
         views.setTextViewText(R.id.tv_widget_ingredients, sharedPreferences.getString(Constant.PREFERENCES_WIDGET_CONTENT, ""));
 
         //INTNET

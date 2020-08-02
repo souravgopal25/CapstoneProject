@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements ListItemClickList
             Log.e(TAG, e.getMessage());
         }
         intent.putExtra(CATEGORY, mList.get(clickedIndex).getItemName());
-        //TODO
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setSharedElementEnterTransition(new Explode());
             startActivity(intent,

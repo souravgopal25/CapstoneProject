@@ -67,9 +67,8 @@ public class DeliveryDetailActivity extends AppCompatActivity {
        order.setZip(sZip);
         Log.e(TAG,order.toString()+order.getAddress()+"\n"+order.getZip());
         new FirebaseData().execute(order);
-        Toast.makeText(this, "Order Placed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.orderplaced), Toast.LENGTH_SHORT).show();
         deliveryDetailActivityViewModel.deleteAll();
-        Toast.makeText(this, "Order Places And Orded is Added To Widget", Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(DeliveryDetailActivity.this,MainActivity.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setSharedElementEnterTransition(new Explode());

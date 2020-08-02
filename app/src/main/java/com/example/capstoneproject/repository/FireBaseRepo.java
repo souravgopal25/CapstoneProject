@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.example.capstoneproject.R;
 import com.example.capstoneproject.model.Bill;
 import com.example.capstoneproject.model.Order;
 import com.example.capstoneproject.model.User;
@@ -28,7 +29,8 @@ public class FireBaseRepo {
         myRef.child(user.getUid()).child("Profile").setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(context, "SUCCESSFULLY UPLOADED", Toast.LENGTH_SHORT).show();
+                String str=context.getResources().getString(R.string.succesfullyupload);
+                Toast.makeText(context, str, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -39,7 +41,7 @@ public class FireBaseRepo {
         myRef.push().child(Integer.toString(order.getOrderNo())).setValue(order).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(context, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.succesfullyupload), Toast.LENGTH_SHORT).show();
             }
         });
     }

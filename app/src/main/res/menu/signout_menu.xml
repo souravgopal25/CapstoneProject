@@ -4,7 +4,7 @@
         android:id="@+id/mi_action_widget"
 
         android:orderInCategory="1"
-        android:title="Sign-Out"
+        android:title="@string/signout"
 
         />
 </menu>

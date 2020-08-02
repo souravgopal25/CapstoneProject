@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
+        android:contentDescription="@string/deliverydetail"
         android:padding="10dp">
 
 
@@ -22,7 +23,7 @@
             android:textColorHighlight="@color/dark"
             android:padding="10dp"
 
-            android:text=" Delivery Details "
+            android:text="@string/deliverydetail"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -35,9 +36,9 @@
             android:background="@android:color/white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:hint="FullName"
+            android:hint="@string/name"
             android:elevation="8dp"
-            android:inputType="textCapWords"
+            android:inputType="textPersonName"
             android:padding="10dp"
             android:singleLine="true"
 
@@ -86,7 +87,7 @@
             android:background="@android:color/white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:hint="Address"
+            android:hint="@string/address"
             android:inputType="textPostalAddress"
             android:elevation="8dp"
             android:padding="10dp"
@@ -104,7 +105,7 @@
             android:background="@android:color/white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:hint="Landmark"
+            android:hint="@string/landmark"
             android:inputType="textPostalAddress"
             android:elevation="8dp"
             android:padding="10dp"
@@ -122,8 +123,8 @@
             android:background="@android:color/white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
-            android:hint="Zip code"
-            android:inputType="textPostalAddress"
+            android:hint="@string/zipcode"
+            android:inputType="number"
             android:elevation="8dp"
             android:padding="10dp"
             android:singleLine="true"
@@ -135,8 +136,9 @@
             android:id="@+id/btnOrder"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Place Order\n(Cash On Delivery)"
+            android:text="@string/cod"
             android:elevation="@dimen/elevationCard"
+            android:contentDescription="@string/cod"
             android:background="@color/textonActionBar"
             android:gravity="center"
             android:layout_gravity="center"

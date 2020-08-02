@@ -47,9 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:minHeight="800dp"
-        android:layout_marginLeft="@dimen/layoutmarginLeft"
+        android:layout_marginStart="@dimen/layoutmarginLeft"
         android:layout_marginTop="@dimen/layoutmarginTop"
-        android:layout_marginRight="@dimen/layoutmarginright" />
+        android:layout_marginEnd="@dimen/layoutmarginright" />
 
 
     <LinearLayout
@@ -87,6 +87,7 @@
 
         <Button
             android:id="@+id/btnnext"
+            android:contentDescription="@string/next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/next"

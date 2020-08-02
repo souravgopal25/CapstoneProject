@@ -51,11 +51,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (TextUtils.isEmpty(loginEmailid.getText().toString())) {
-                    loginEmailid.setError("Email ID Required");
+                    loginEmailid.setError(getResources().getString(R.string.emailreq));
                     return;
                 }
                 if (TextUtils.isEmpty(loginPassword.getText().toString())) {
-                    loginPassword.setError("Password Required");
+                    loginPassword.setError(getResources().getString(R.string.passreq));
                     return;
                 }
                 String email = loginEmailid.getText().toString();
@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(LoginActivity.this, "Authentication failed.:" + task.getException().getMessage(),
+                                Toast.makeText(LoginActivity.this, getResources().getString(R.string.authfail) + task.getException().getMessage(),
                                         Toast.LENGTH_SHORT).show();
 
                             }
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
         } else {
-            Toast.makeText(this, "No Internet Connectivity", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.nointernet), Toast.LENGTH_SHORT).show();
         }
     }
 
